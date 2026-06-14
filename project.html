@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow — Live Weather</title>
+    <meta name="description" content="Get real-time weather for any city — temperature, humidity, wind and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Full-screen background image -->
+    <div class="bg-image"></div>
+    <!-- Colour overlay gradient -->
+    <div class="bg-overlay"></div>
+
+    <!-- Floating decorative blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <span class="logo-icon">🌤️</span>
+                <span class="logo-text">WeatherNow</span>
+            </div>
+            <p class="tagline">Real-time weather at your fingertips</p>
+        </div>
+
+        <!-- Search -->
+        <form id="search-form">
+            <div class="input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input id="city-input" type="text" placeholder="Search any city…" autocomplete="off">
+            </div>
+            <input type="submit" value="Search" id="button">
+        </form>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Weather Results -->
+            <div id="weather-data">
+                <div class="icon"></div>
+                <div class="temperature"></div>
+                <div class="description"></div>
+                <div class="details"></div>
+            </div>
+
+            <!-- Empty / Idle state -->
+            <div class="empty-state" id="empty-state">
+                <div class="empty-emoji">🌍</div>
+                <p>Type a city name and hit <strong>Search</strong> to see live conditions.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="footer-note">Powered by OpenWeatherMap</p>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
